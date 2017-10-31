@@ -1,14 +1,19 @@
-Labeled context for WSI/WSD
-===========================
+# A Participant's Kit for RUSSE 2018 WSI&amp;D Competition
 
-Installation
+This repository contains instructions for participation in the shared task. 
+
+Quick start
 -------------
 
-To be able to run the evaluation script ```evaluate.py``` you need to install dependencies:
+To be able to participate in the shared task you need to check out this repository and install dependencies of the evaluation script. Type this in console:
 
 ```
+git clone https://github.com/nlpub/russe-wsi-kit.git
 pip install -r requirements.txt
 ```
+
+**Important note**: you need to have Python and pip package manager installed on your system (Linux/Windows/Mac OSX). The scripts work for both Python 2.7+ and 3.4+. We recommend using Python 3.4+.
+
 
 Using the evaluation script
 --------------------------
@@ -32,7 +37,7 @@ word    ari count
 Your goal is to create a file similar to ```data/main/wiki-wiki/train.baseline-adagram.csv``` and submit it to the organizers.
 
 
-Datasets
+Description of the Datasets
 --------
 
 The participants of the shared task need to work with three datasets of varying sense inventories and types of texts. All the datasets are located in the directory ```data/main```. One dataset is located in one directory. The name of the directory is <inventory>-<corpus>. For instance ```bts-rnc```, which represents a datasets based on the word sense inventory BTS (Большой Толковый Словарь) and the RNC corpus.
@@ -52,7 +57,7 @@ In addition, in the directory ```data/additional``` we provide three extra datas
 The table below summarizes the datasets provided in this repository:
 
 
-Data format
+Format of the Dataset Files
 ----------
 
 Train and test datasets is stored in .csv files named by words, each file has a header:
@@ -76,7 +81,7 @@ context_id	word	gold_sense_id	predict_sense_id	positions	context
 ...	...	...	...	...	...
 ```
 
-Structure of the repository
+Structure of the Repository
 ---------------------------
 
 - ```data``` -- directory with the train datasets and the corresponding baselines based on the Adagram
@@ -88,4 +93,5 @@ Structure of the repository
 Restrictions
 -----------
 
-The only restriction which may disqualify a participant is that the use of the Gramota.ru or Bolshoi Tolkovii Slovar (Большой Толковый Словарь) is not alowed for the dataset ```
+The only restriction which may disqualify a participant is that the use of the Gramota.ru or Bolshoi Tolkovii Slovar (Большой Толковый Словарь) is not alowed for the dataset **bts-rnc**. For the other two datasets (**wiki-wiki** and **active-dict**) there is no restrictions: participants are free to use any resources. However, if you use not only text corpora, but instead you use some dictionaries your submissions must be in the knowledge-rich track. Otherwiese, if the only resource your model is using is text corpora (or other resources which are not lexical dictionaries or databases containing explicit sense inventories) you can submit to the knowledge-free track. 
+
