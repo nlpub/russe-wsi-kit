@@ -1,6 +1,6 @@
 # A Participant's Kit for RUSSE 2018 WSI&amp;D Competition
 
-This repository contains instructions for participation in the shared task. 
+This repository contains instructions for participation in the [shared task on word sense induction and disambiguation for the Russian language](http://russe.nlpub.org/2018/wsi). 
 
 Quick start
 -------------
