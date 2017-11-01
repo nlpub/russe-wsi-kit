@@ -111,7 +111,7 @@ The following context of the target word "замок" has id "1":
 and all the contexts of the word "замок" which refere to the same sense also have the sense id "1". On the other hand, the other sense of this word is represented with the sense id "2", e.g.: 
 
 ```
-изобретатель поставил в тыльный конец ригеля круглую пластину , которая                  препятствовала передвижению засова ключом , пока пластина ( вращаемая часовым механизмом ) не становилась
+изобретатель поставил в тыльный конец ригеля круглую пластину , которая препятствовала передвижению засова ключом , пока пластина ( вращаемая часовым механизмом ) не становилась... 
 ```
 
 Your goal really is to design a system which takes as an input a pair of (word, context) and outputs the sense identifier, e.g. "1" or "2". This is important to note that it does not matter which sense identifiers you use! They should not match sense identifiers of the gold standard! We use [clustering based evaluation](https://nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-clustering-1.html), namely we rely on the [Adjusted Rand Index](http://scikit-learn.org/stable/modules/generated/sklearn.metrics.adjusted_rand_score.html). Therefore, your "cluster sense labels" should not correspond nesesarily to the labels from the gold standard. 
