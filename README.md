@@ -55,7 +55,7 @@ For the three datasets described above we will release test parts which will be 
 In addition, in the directory ```data/additional``` we provide three extra datasets, which can be used as additional training data from (Lopukhin and Lopukhina, 2016). These datasets are based on various sense inventories (active dictionary, BTS) and various corpora (RNC, RuTenTen). Note that we will not release any test datasets that correspond to these datasets (yet they still may be useful e.g. for multi-task learning).  
 
 |Dataset|Type|Inventory|Corpus|Split|Num. of words|Num. of senses|Num. of contexts|
-|-----|-----|---------|-----|------|---------|----------|----------|
+|-----|-----|---------|-----|------|:---------:|:----------:|:----------:|
 |wiki-wiki|main|Wikipedia|Wikipedia|train|4|8|439
 |bts-rnc|main|Gramota.ru|RNC|train|30|96|3491
 |active-dict|main|Active Dict.|Apresyan Dict.|train|85|312|2073
