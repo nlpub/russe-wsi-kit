@@ -57,7 +57,7 @@ In addition, in the directory ```data/additional```, we provide three extra data
 The table below summarizes the datasets:
 
 |Dataset|Type|Inventory|Corpus|Split|Num. of words|Num. of senses|Avg. num. of senses|Num. of contexts|
-|-----|-----|---------|-----|------|:---------:|:----------:|:----------:|
+|-----|-----|---------|-----|------|:---------:|:----------:|:----------:|:----------:|
 |wiki-wiki|main|Wikipedia|Wikipedia|train|4|8|2.0|439
 |bts-rnc|main|Gramota.ru|RNC|train|30|96|3.2|3491
 |active-dict|main|Active Dict.|Apresyan Dict.|train|85|312|3.7|2073
