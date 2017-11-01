@@ -59,7 +59,6 @@ In addition, in the directory ```data/additional``` we provide three extra datas
 |wiki-wiki|main|Wikipedia|Wikipedia|train|4|8|439
 |bts-rnc|main|Gramota.ru|RNC|train|30|96|3491
 |active-dict|main|Active Dict.|Apresyan Dict.|train|85|312|2073
-|-----|-----|---------|-----|------|---------|----------|----------|
 |active-rnc|additional|Active Dict.|RNC|train|21|54|1662
 |active-rutenten|additional|Active Dict.|ruTenTen|train|21|54|3052
 |bts-rutenten|additional|Gramota.ru|ruTenTen|train|10|13|562
