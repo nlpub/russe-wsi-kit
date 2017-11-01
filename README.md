@@ -60,8 +60,8 @@ The table below summarizes the datasets:
 |-----|-----|---------|-----|------|:---------:|:----------:|:----------:|:----------:|
 |wiki-wiki|main|Wikipedia|Wikipedia|train|4|8|2.0|439
 |bts-rnc|main|Gramota.ru|RNC|train|30|96|3.2|3491
-|active-dict|main|Active Dict.|Apresyan Dict.|train|85|312|3.7|2073
-|active-rnc|additional|Active Dict.|RNC|train|21|54|2.6|1662
+|active-dict|main|Active Dict.|Active Dict.|train|85|312|3.7|2073
+|active-rnc|additional|Active Dict.|RNC|train|20|54|2.6|1662
 |active-rutenten|additional|Active Dict.|ruTenTen|train|21|54|2.6|3052
 |bts-rutenten|additional|Gramota.ru|ruTenTen|train|10|13|1.3|562
 
@@ -116,7 +116,7 @@ and all the contexts of the word "замок" which refer to the same "building"
 изобретатель поставил в тыльный конец ригеля круглую пластину , которая препятствовала передвижению засова ключом , пока пластина ( вращаемая часовым механизмом ) не становилась...
 ```
 
-Your goal really is to **design a system which takes as an input a pair of (word, context) and outputs the sense identifier**, e.g. "1" or "2". This is important to note that it does not matter which sense identifiers you use (numbers in the "gold_sense_id" and "predict_sense_id" columns)! It is not needed that they match sense identifiers of the gold standard! For instance, if in the "gold_sense_id" column you use identifiers {a,b,c} and in the "predict_sense_id" you use identifiers {1,2,3}, but the labelling of the data match so that each context labeled with "1" is always labeled with "a", each context labeled with "2" is always labeled with "b", etc. you will get the top score. Matching of the gold and predict sense inventories is not a requirement as we use [clustering based evaluation](https://nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-clustering-1.html), namely we rely on the [Adjusted Rand Index](http://scikit-learn.org/stable/modules/generated/sklearn.metrics.adjusted_rand_score.html). Therefore, your cluster sense labels should not correspond necessarily to the labels from the gold standard.
+Your goal is to **design a system which takes as an input a pair of (word, context) and outputs the sense identifier**, e.g. "1" or "2". This is important to note that it does not matter which sense identifiers you use (numbers in the "gold_sense_id" and "predict_sense_id" columns)! It is not needed that they match sense identifiers of the gold standard! For instance, if in the "gold_sense_id" column you use identifiers {a,b,c} and in the "predict_sense_id" you use identifiers {1,2,3}, but the labelling of the data match so that each context labeled with "1" is always labeled with "a", each context labeled with "2" is always labeled with "b", etc. you will get the top score. Matching of the gold and predict sense inventories is not a requirement as we use [clustering based evaluation](https://nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-clustering-1.html), namely we rely on the [Adjusted Rand Index](http://scikit-learn.org/stable/modules/generated/sklearn.metrics.adjusted_rand_score.html). Therefore, your cluster sense labels should not necessarily correspond to the labels from the gold standard.
 
 Thus, the successful submissions will group all contexts referring to the same word sense (by assigning the same ```predict_sense_id```). To achieve this goal, you can you models which induce sense inventory from a large corpus of all words in the corpus, e.g. Adagram or try to cluster directly the contexts of one word, e.g. using the k-Means algorithm. Besides, you can use an existing sense inventory from a dictionary, e.g. RuWordNet, to build your modes (which again do not match exactly the gold dataset, but this is not a problem).  
 Below we provide more details on differences between two tracks.
