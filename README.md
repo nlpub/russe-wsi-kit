@@ -54,6 +54,15 @@ For the three datasets described above we will release test parts which will be 
 
 In addition, in the directory ```data/additional``` we provide three extra datasets, which can be used as additional training data from (Lopukhin and Lopukhina, 2016). These datasets are based on various sense inventories (active dictionary, BTS) and various corpora (RNC, RuTenTen). Note that we will not release any test datasets that correspond to these datasets (yet they still may be useful e.g. for multi-task learning).  
 
+|Dataset|Type|Inventory|Corpus|Split|Num. of words|Num. of senses|Num. of contexts|
+|-----|-----|---------|-----|------|---------|----------|----------|
+|wiki-wiki|main|Wikipedia|Wikipedia|train|4|8|439
+|bts-rnc|main|Gramota.ru|RNC|train|30|96|3491
+|active-dict|main|Active Dict.|Apresyan Dict.|train|85|312|2073
+|-----|-----|---------|-----|------|---------|----------|----------|
+|active-rnc|additional|Active Dict.|RNC|train|21|54|1662
+|active-rutenten|additional|Active Dict.|ruTenTen|train|21|54|3052
+|bts-rutenten|additional|Gramota.ru|ruTenTen|train|10|13|562
 
 Format of the Dataset Files
 ----------
@@ -92,5 +101,12 @@ Structure of the Repository
 Restrictions
 -----------
 
-The only restriction which may disqualify a participant is that the use of the Gramota.ru or Bolshoi Tolkovii Slovar (Большой Толковый Словарь) is not alowed for the dataset **bts-rnc**. For the other two datasets (**wiki-wiki** and **active-dict**) there is no restrictions: participants are free to use any resources. However, if you use not only text corpora, but instead you use some dictionaries your submissions must be in the knowledge-rich track. Otherwiese, if the only resource your model is using is text corpora (or other resources which are not lexical dictionaries or databases containing explicit sense inventories) you can submit to the knowledge-free track. 
+The only restriction which may disqualify a participant is that the use of the Gramota.ru or Bolshoi Tolkovii Slovar (Большой Толковый Словарь) is not alowed for the dataset **bts-rnc**. For the other two datasets (**wiki-wiki** and **active-dict**) there is no restrictions: participants are free to use any resources. 
+
+
+Knowldege-free and Knowledge-Rich Tracks
+----------------------------------------
+
+If you use not only text corpora, but instead you use some dictionaries your submissions must be in the knowledge-rich track. Otherwiese, if the only resource your model is using is text corpora (or other resources which are not lexical dictionaries or databases containing explicit sense inventories) you can submit to the knowledge-free track. 
+
 

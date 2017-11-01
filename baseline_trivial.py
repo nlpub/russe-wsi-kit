@@ -32,11 +32,3 @@ for dataset_fpath in datasets:
     df.predict_sense_id = [randrange(1,7) for x in range(len(df))]
     evaluate(save(df, "random-1-6"))
 
-from os import remove
-for dataset_fpath in datasets:
-    remove(save(df, "oracle"))  
-    remove(save(df, "constant"))
-    remove(save(df, "unique-dataset-wise"))
-    remove(save(df, "random-1-3"))
-    remove(save(df, "random-1-6"))
-
