@@ -34,7 +34,7 @@ word    ari count
     0.392449    439
 ```
 
-The output of your script should have the same format as ```data/main/wiki-wiki/train.baseline-adagram.csv```. When the test data will be available, you'll need to run your script against it and submit to the organizers.
+The output of your system should have the same format as the sample baseline file provided in this repository ```data/main/wiki-wiki/train.baseline-adagram.csv```. When the test data will be available, you'll need to run your system against a test file in the similar format and submit to a CSV file with the result to the organizers.
 
 
 Description of the datasets
