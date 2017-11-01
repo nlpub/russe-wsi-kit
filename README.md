@@ -37,7 +37,7 @@ word    ari count
 The output of your script should have the same format as ```data/main/wiki-wiki/train.baseline-adagram.csv```. When the test data will be available, you'll need to run your script against it and submit to the organizers.
 
 
-Description of the Datasets
+Description of the datasets
 --------
 
 The participants of the shared task need to work with three datasets of varying sense inventories and types of texts. All the datasets are located in the directory ```data/main```. One dataset is located in one directory. The name of the directory is ```<inventory>-<corpus>```. For instance ```bts-rnc```, which represents datasets based on the word sense inventory BTS (Bolshoi Tolkovii Slovar') and the RNC corpus.
@@ -65,7 +65,7 @@ The table below summarizes the datasets:
 |active-rutenten|additional|Active Dict.|ruTenTen|train|21|54|3052
 |bts-rutenten|additional|Gramota.ru|ruTenTen|train|10|13|562
 
-Format of the Dataset Files
+Format of the dataset files
 ----------
 
 Train and test datasets are stored in .csv files (the name of the folder corresponds to the name of the dataset), each file has a header:
@@ -90,7 +90,7 @@ context_id    word    gold_sense_id    predict_sense_id    positions    context
 ...    ...    ...    ...    ...    ...
 ```
 
-Structure of the Repository
+Structure of this repository
 ---------------------------
 
 - ```data``` -- directory with the train datasets and the corresponding baselines based on the Adagram
@@ -99,16 +99,18 @@ Structure of the Repository
 - ```baseline_adagram.py``` -- the script used to generate the Adagram baselines
 - ```requirements.txt``` -- the list of all dependencies of the ```evaluate.py``` and ```baseline_trivial.py``` scripts (note that the ```baseline_adagram.py``` has more dependencies specified inside this file)
 
-What should you do with the training data?
+What should you do with the training data (how to start)?
 -------------------
 
 Each training data contains a target word (the ```word``` column) and a context that represents the word (the ```context``` column). The ```gold_sense_id``` contains the corect sense identifier. For instance, take the first few examples from the **wiki-wiki** dataset:
 
 The following context of the target word "замок" has id "1":
 
-```замок владимира мономаха в любече . многочисленные укрепленные монастыри также не          являлись замками как таковыми — это были крепости...```
+```
+замок владимира мономаха в любече . многочисленные укрепленные монастыри также не          являлись замками как таковыми — это были крепости...
+```
 
-and all the contexts of the word "замок" which refere to the same sense also have the sense id "1". On the other hand, the other sense of this word is represented with the sense id "2", e.g.:
+and all the contexts of the word "замок" which refer to the same sense also have the sense id "1". On the other hand, the other sense of this word is represented with the sense id "2", e.g.:
 
 ```
 изобретатель поставил в тыльный конец ригеля круглую пластину , которая препятствовала передвижению засова ключом , пока пластина ( вращаемая часовым механизмом ) не становилась...
@@ -121,7 +123,7 @@ Below we provide more details on differences between two tracks.
 
 During the training phase of the shared task, you are supposed to develop your models, testing them on the available datasets. You will be supposed to apply the developed models on the test data, once they will be made available.
 
-Knowledge-free and Knowledge-Rich Tracks
+Knowledge-free and knowledge-rich tracks
 ----------------------------------------
 
 During the test time, you are supposed to select between two tracks for each submission. The rule is simple: if you used any dictionaries to build your model, e.g. Wiktionary, offline dictionaries, RuThes, RuWordNet, YARN, and so on, you have to select the knowledge-rich track. Otherwise, you have to select the knowledge-free track. Thus, if you use not only text corpora, but instead you use some dictionaries your submissions must be in the knowledge-rich track. Otherwise, if the only resource your model is using is text corpora (or other resources which are not lexical dictionaries or databases containing explicit sense inventories) you can submit to the knowledge-free track. If you are not sure which track to use write to us.
