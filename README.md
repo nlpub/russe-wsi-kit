@@ -119,6 +119,8 @@ Your goal really is to design a system which takes as an input a pair of (word, 
 Thus, the successfull submissions will group all contexts referring to the same word sense (by assigning the same ```predict_sense_id```). To achive this goal, you can you models which induce sense inventory from a large corpus for all words in the corpus, e.g. Adagram, or try to cluster directly the contexts of one word, e.g. using the k-Means algorithm. Besides, you can use an exising sense inventory from a dictionary to build your modes (which again do not match exactly the gold dataset, but this is not a problem).  
 Below we provode more details on differences between two tracks. 
 
+During the training phase of the shared task you are supposed to develop your models, testing them on the available datasets. You will be supposed to apply the developed models on the test data, once they will be made available.
+
 Knowldege-free and Knowledge-Rich Tracks
 ----------------------------------------
 
