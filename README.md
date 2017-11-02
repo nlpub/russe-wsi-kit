@@ -1,4 +1,4 @@
-# A Participant's Kit for RUSSE 2018 WSI&amp;D Shared Task
+# A Participant's Kit for RUSSE 2018 Word Sense Induction and Disambiguation Shared Task
 
 This repository contains instructions for participation in the [shared task on word sense induction and disambiguation for the Russian language](http://russe.nlpub.org/2018/wsi). **TLDR**: You are given a word, e.g. ```"замок"``` and a bunch of text fragments (aka "contexts") where this word occurrs, e.g. ```"замок владимира мономаха в любече"``` and  ```"передвижению засова ключом в замке"```. You need to cluster these contexts in the (unknown in advance) number of clusters which correspond to various senses of the word. In this example you want to have two groups with the contexts of the "lock" and the "castle" senses of the word ```"замок"```. 
 
