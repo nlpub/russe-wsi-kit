@@ -1,6 +1,79 @@
 # A Participant's Kit for RUSSE 2018 Word Sense Induction and Disambiguation Shared Task
 
-This repository contains instructions for participation in the [shared task on word sense induction and disambiguation for the Russian language](http://russe.nlpub.org/2018/wsi). **TLDR**: You are given a word, e.g. ```"замок"``` and a bunch of text fragments (aka "contexts") where this word occurrs, e.g. ```"замок владимира мономаха в любече"``` and  ```"передвижению засова ключом в замке"```. You need to cluster these contexts in the (unknown in advance) number of clusters which correspond to various senses of the word. In this example you want to have two groups with the contexts of the "lock" and the "castle" senses of the word ```"замок"```. 
+This repository contains instructions for participation in the [shared task on word sense induction and disambiguation for the Russian language](http://russe.nlpub.org/2018/wsi). **TLDR**: You are given a word, e.g. ```"замок"``` and a bunch of text fragments (aka "contexts") where this word occurrs, e.g. ```"замок владимира мономаха в любече"``` and  ```"передвижению засова ключом в замке"```. You need to cluster these contexts in the (unknown in advance) number of clusters which correspond to various senses of the word. In this example you want to have two groups with the contexts of the "lock" and the "castle" senses of the word ```"замок"```. For each of the three test datasets, you need to download the **text.csv** file, fill the ``predicted_sense_id`` in this file and submit it using at [CodaLab](https://competitions.codalab.org/) platform. You will immediately see your results in the leaderboard computed on a part of the test dataset. The final results will be announced on the 1st of February.  
+
+# Making a submission (test dataset)
+
+Starting from the **15 of December** until the **15 of January** participants are provided with the test dataset. This means that you can use your models and make real submission to the shared task. The submissions are performed via the [CodaLab](https://competitions.codalab.org/) platform. To participate, follow the steps below.
+
+## Set by step instruction: how to submit
+
+### 1. Get the CSV files with the test datasets 
+
+Checkout the repository:
+
+```
+git clone https://github.com/nlpub/russe-wsi-kit.git
+```
+
+You will find three files with the test datasets each named ``test.csv`` in the respective sub-directories in the ``data`` folder:
+
+|Dataset|Inventory|Corpus|Num. of words|Num. of contexts|
+|-----|---------|-----|:---------:|:----------:|
+|[wiki-wiki](https://github.com/nlpub/russe-wsi-kit/blob/master/data/main/wiki-wiki/test.csv)|Wikipedia|Wikipedia|7|638
+|[bts-rnc](https://github.com/nlpub/russe-wsi-kit/blob/master/data/main/bts-rnc/test.csv)|main|Gramota.ru|RNC|51|6556
+|[active-dict](https://github.com/nlpub/russe-wsi-kit/blob/master/data/main/active-dict/test.csv)|main|Active Dict.|Active Dict.|168|3729
+
+
+### 2. Perform word sense induction based on the test data 
+
+Apply the model you developed on the trainig dataset to the test data from the mentioned above CSV files. Namely, your goal is to fill the column ``predict_sense_id`` in each file with an integer identifier of a word sense which correspond to the given context. This procedure is exactly the same as for the train dataset (see the instructions for the train dataset for more details). In brief: you can assign sense identifiers from ANY sense inventory to the contexts. They should not match certain gold standard inventory (we do not provide any test sense inventory). The contexts (sentences) which share the same meaning should have the same ``predict_sense_id``. The context with use different meanings of the target word, e.g. ``bank (area)`` vs ``bank (company)`` should have different sense identifiers. 
+
+In the end, you need to apply your models to the three mentioned above datasets and generate three ``test.csv`` files corresponding to your solutions of these datasets. You can use different models to solve different datasets.
+
+### 3. Compress the test.csv into a zip archive 
+
+This is a requirement of the CodaLab platform: all submissions should be inside a zip archive. Compress each of your ``test.csv`` file, e.g. like this: 
+
+```
+zip wiki-wiki.zip data/main/wiki-wiki/test.csv
+```
+
+In the end, you need to obtain three zip archives with the solutions. 
+
+
+### 4. Register at the CodaLab platform 
+
+Go to  [Codalab.org](https://competitions.codalab.org) and press "Sign Up". If you are already registered, press "Sign In".
+
+**Note**: If you for some reasons cannot or do not want to use the CodaLab platform, you can send us the submissions by email to  *panchenko.alexander@gmail.com*. Please try to avoid using this option as much as possible as it creates some extra work for us. 
+
+### 4. Open CodaLab task on the corresponding dataset
+
+For each of the three datasets, there exist a separate task on the CodaLab. Depdending on the dataset you want to submit currently, you need to use the corresponding shared task: 
+
+- **[wiki-wiki dataset](https://competitions.codalab.org/competitions/17810)**  
+
+- **[bts-rnc dataset](https://competitions.codalab.org/competitions/17809)**
+
+- **[active-dict](https://competitions.codalab.org/competitions/17806)** 
+
+
+Follow these steps to submit a model:
+
+ 1. Click the "Participate" link.
+ 2. Click the "Submit / View Results" link. 
+ 3. Click "Submit" button to select zip archive from your computer. The file will be uploaded. 
+ 4. Click "Update description" and enter the name of your track ("knowledge-free" or "knowledge-rich"). It is required to indicate in the description of your job "knowledge-free" or "knowledge-rich" to let us know in which track you participate. Optionally, you can also provide a short description of your approach in the description field. 
+ 5. Click the "Results" tab to see evaluation results of your submission.
+
+Please let us know if you have any questions. 
+
+## Number of submission
+
+We do not limit the number of submissions. You can select which submissions will be shown in the leaderboard in the settings of the CodaLab platform. 
+
+# Developing a model on (train dataset)
 
 Quick start
 -------------
