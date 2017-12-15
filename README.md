@@ -48,7 +48,7 @@ Go to  [Codalab.org](https://competitions.codalab.org) and press "Sign Up". If y
 
 **Note**: If you for some reasons cannot or do not want to use the CodaLab platform, you can send us the submissions by email to  *panchenko.alexander@gmail.com*. Please try to avoid using this option as much as possible as it creates some extra work for us. 
 
-### 4. Open CodaLab task on the corresponding dataset
+### 4. Submit at CodaLab the three datasets
 
 For each of the three datasets, there exist a separate task on the CodaLab. Depending on the dataset you want to submit at the moment, you need to use the corresponding shared task: 
 
@@ -61,11 +61,17 @@ For each of the three datasets, there exist a separate task on the CodaLab. Depe
 
 Follow these steps to submit a model:
 
- 1. Click the "Participate" link.
- 2. Click the "Submit / View Results" link. 
- 3. Click "Submit" button to select zip archive from your computer. The file will be uploaded. 
- 4. Click "Update description" and enter the name of your track ("knowledge-free" or "knowledge-rich"). It is required to indicate in the description of your job "knowledge-free" or "knowledge-rich" to let us know in which track you participate. Optionally, you can also provide a short description of your approach in the description field. 
- 5. Click the "Results" tab to see evaluation results of your submission.
+  1. Click the "Participate" link. 
+  
+  2. If you are making the first submission regiser for the task by pressing the "Register" button.
+  
+  3. Click the "Submit / View Results" link. 
+  
+  4. Click "Submit" button to select zip archive from your computer. The file will be uploaded. 
+   
+  5. Click "Update description" and enter the name of your track ("knowledge-free" or "knowledge-rich"). It is required to indicate in the description of your job "knowledge-free" or "knowledge-rich" to let us know in which track you participate. Optionally, you can also provide a short description of your approach in the description field. Press "Save description" once you entered the text.
+ 
+  6. Click the "Results" tab to see evaluation results of your submission.
 
 Please let us know if you have any questions. 
 
