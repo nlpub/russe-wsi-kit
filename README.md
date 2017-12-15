@@ -21,8 +21,8 @@ You will find three files with the test datasets each named ``test.csv`` in the 
 |Dataset|Inventory|Corpus|Num. of words|Num. of contexts|
 |-----|---------|-----|:---------:|:----------:|
 |[wiki-wiki](https://github.com/nlpub/russe-wsi-kit/blob/master/data/main/wiki-wiki/test.csv)|Wikipedia|Wikipedia|7|638
-|[bts-rnc](https://github.com/nlpub/russe-wsi-kit/blob/master/data/main/bts-rnc/test.csv)|main|Gramota.ru|RNC|51|6556
-|[active-dict](https://github.com/nlpub/russe-wsi-kit/blob/master/data/main/active-dict/test.csv)|main|Active Dict.|Active Dict.|168|3729
+|[bts-rnc](https://github.com/nlpub/russe-wsi-kit/blob/master/data/main/bts-rnc/test.csv)|Gramota.ru|RNC|51|6556
+|[active-dict](https://github.com/nlpub/russe-wsi-kit/blob/master/data/main/active-dict/test.csv)|Active Dict.|Active Dict.|168|3729
 
 
 ### 2. Perform word sense induction based on the test data 
@@ -50,7 +50,7 @@ Go to  [Codalab.org](https://competitions.codalab.org) and press "Sign Up". If y
 
 ### 4. Open CodaLab task on the corresponding dataset
 
-For each of the three datasets, there exist a separate task on the CodaLab. Depdending on the dataset you want to submit currently, you need to use the corresponding shared task: 
+For each of the three datasets, there exist a separate task on the CodaLab. Depending on the dataset you want to submit at the moment, you need to use the corresponding shared task: 
 
 - **[wiki-wiki dataset](https://competitions.codalab.org/competitions/17810)**  
 
