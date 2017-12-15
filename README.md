@@ -59,8 +59,11 @@ The table below summarizes the datasets:
 |Dataset|Type|Inventory|Corpus|Split|Num. of words|Num. of senses|Avg. num. of senses|Num. of contexts|
 |-----|-----|---------|-----|------|:---------:|:----------:|:----------:|:----------:|
 |wiki-wiki|main|Wikipedia|Wikipedia|train|4|8|2.0|439
+|wiki-wiki|main|Wikipedia|Wikipedia|test|7|?|?|638
 |bts-rnc|main|Gramota.ru|RNC|train|30|96|3.2|3491
+|bts-rnc|main|Gramota.ru|RNC|test|51|?|?|6556
 |active-dict|main|Active Dict.|Active Dict.|train|85|312|3.7|2073
+|active-dict|main|Active Dict.|Active Dict.|test|168|?|?|3729
 |active-rnc|additional|Active Dict.|RNC|train|20|71|3.6|1829
 |active-rutenten|additional|Active Dict.|ruTenTen|train|21|71|3.4|3671
 |bts-rutenten|additional|Gramota.ru|ruTenTen|train|11|25|2.3|956
