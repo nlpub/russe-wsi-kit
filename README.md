@@ -75,9 +75,19 @@ Follow these steps to submit a model:
 
 Please let us know if you have any questions. 
 
-## Number of submission
+## Number of submissions
 
 We do not limit the number of submissions. You can select which submissions will be shown in the leaderboard in the settings of the CodaLab platform. 
+
+
+## Knowledge-free and knowledge-rich tracks
+
+During the test time, you are supposed to select between two tracks for each submission. The rule is simple: if you used any dictionaries to build your model, e.g. Wiktionary, offline dictionaries, RuThes, RuWordNet, YARN, and so on, you have to select the knowledge-rich track. Otherwise, you have to select the knowledge-free track. Thus, if you use not only text corpora, but instead you use some dictionaries your submissions must be in the knowledge-rich track. Otherwise, if the only resource your model is using is text corpora (or other resources which are not lexical dictionaries or databases containing explicit sense inventories) you can submit to the knowledge-free track. If you are not sure which track to use write to us.
+
+## Restrictions
+
+The only restriction which may disqualify a participant is that the use of the Gramota.ru or Bolshoi Tolkovii Slovar (Большой Толковый Словарь) is not allowed for developing the models for the dataset **bts-rnc**. For the other two datasets (**wiki-wiki** and **active-dict**) there are no restrictions: participants are free to use any resources.
+
 
 # Developing a model (train dataset)
 
@@ -205,17 +215,6 @@ Below we provide more details on differences between two tracks.
 
 During the training phase of the shared task, you are supposed to develop your models, testing them on the available datasets. You will be supposed to apply the developed models to the test data, once they will be made available.
 
-Knowledge-free and knowledge-rich tracks
-----------------------------------------
-
-During the test time, you are supposed to select between two tracks for each submission. The rule is simple: if you used any dictionaries to build your model, e.g. Wiktionary, offline dictionaries, RuThes, RuWordNet, YARN, and so on, you have to select the knowledge-rich track. Otherwise, you have to select the knowledge-free track. Thus, if you use not only text corpora, but instead you use some dictionaries your submissions must be in the knowledge-rich track. Otherwise, if the only resource your model is using is text corpora (or other resources which are not lexical dictionaries or databases containing explicit sense inventories) you can submit to the knowledge-free track. If you are not sure which track to use write to us.
-
-Restrictions
------------
-
-The only restriction which may disqualify a participant is that the use of the Gramota.ru or Bolshoi Tolkovii Slovar (Большой Толковый Словарь) is not allowed for developing the models for the dataset **bts-rnc**. For the other two datasets (**wiki-wiki** and **active-dict**) there are no restrictions: participants are free to use any resources.
-
-Questions
----------
+# Questions
 
 If you have any question, write an email to **rusemantics@googlegroups.com** or post it via [Google Groups](https://groups.google.com/forum/?fromgroups#!forum/rusemantics), which is the same thing (this is the primary way of obtaining updates about the shared task and contacting the organizers). Besides, you can follow the updates on our [Facebook group](https://www.facebook.com/rusemantics). Finally, discussions in Russian are also available at [NLPub Q&A forum](https://qa.nlpub.ru/c/russe).
