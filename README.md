@@ -79,7 +79,7 @@ Please let us know if you have any questions.
 
 We do not limit the number of submissions. You can select which submissions will be shown in the leaderboard in the settings of the CodaLab platform. 
 
-# Developing a model on (train dataset)
+# Developing a model (train dataset)
 
 Quick start
 -------------
