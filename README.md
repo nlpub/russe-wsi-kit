@@ -1,10 +1,10 @@
 # A Participant's Kit for RUSSE 2018 Word Sense Induction and Disambiguation Shared Task
 
-This repository contains instructions for participation in the [shared task on word sense induction and disambiguation for the Russian language](http://russe.nlpub.org/2018/wsi). **TLDR**: You are given a word, e.g. ```"замок"``` and a bunch of text fragments (aka "contexts") where this word occurrs, e.g. ```"замок владимира мономаха в любече"``` and  ```"передвижению засова ключом в замке"```. You need to cluster these contexts in the (unknown in advance) number of clusters which correspond to various senses of the word. In this example you want to have two groups with the contexts of the "lock" and the "castle" senses of the word ```"замок"```. For each of the three test datasets, you need to download the **text.csv** file, fill the ``predicted_sense_id`` in this file and submit it using at [CodaLab](https://competitions.codalab.org/) platform. You will immediately see your results in the leaderboard computed on a part of the test dataset. The final results will be announced on the 1st of February.  
+This repository contains instructions for participation in the [shared task on word sense induction and disambiguation for the Russian language](http://russe.nlpub.org/2018/wsi). **TLDR**: You are given a word, e.g. ```"замок"``` and a bunch of text fragments (aka "contexts") where this word occurs, e.g. ```"замок владимира мономаха в любече"``` and  ```"передвижению засова ключом в замке"```. You need to cluster these contexts in the (unknown in advance) number of clusters which correspond to various senses of the word. In this example, you want to have two groups with the contexts of the "lock" and the "castle" senses of the word ```"замок"```. For each of the three test datasets, you need to download the **text.csv** file, fill the ``predicted_sense_id`` in this file and submit it using at [CodaLab](https://competitions.codalab.org/) platform. You will immediately see your results in the leaderboard computed on a part of the test dataset. The final results will be announced on the 1st of February.  
 
 # Making a submission (test dataset)
 
-Starting from the **15 of December** until the **15 of January** participants are provided with the test dataset. This means that you can use your models and make real submission to the shared task. The submissions are performed via the [CodaLab](https://competitions.codalab.org/) platform. To participate, follow the steps below.
+Starting from the **15 of December** until the **15 of January** participants are provided with the test dataset. This means that you can use your models and make a real submission to the shared task. The submissions are performed via the [CodaLab](https://competitions.codalab.org/) platform. To participate, follow the steps below.
 
 ## Set by step instruction: how to submit
 
@@ -27,7 +27,7 @@ You will find three files with the test datasets each named ``test.csv`` in the 
 
 ### 2. Perform word sense induction based on the test data 
 
-Apply the model you developed on the trainig dataset to the test data from the mentioned above CSV files. Namely, your goal is to fill the column ``predict_sense_id`` in each file with an integer identifier of a word sense which correspond to the given context. This procedure is exactly the same as for the train dataset (see the instructions for the train dataset for more details). In brief: you can assign sense identifiers from ANY sense inventory to the contexts. They should not match certain gold standard inventory (we do not provide any test sense inventory). The contexts (sentences) which share the same meaning should have the same ``predict_sense_id``. The context with use different meanings of the target word, e.g. ``bank (area)`` vs ``bank (company)`` should have different sense identifiers. 
+Apply the model you developed on the training dataset to the test data from the mentioned above CSV files. Namely, your goal is to fill the column ``predict_sense_id`` in each file with an integer identifier of a word sense which corresponds to the given context. This procedure is exactly the same as for the training dataset (see the instructions for the training dataset for more details). In brief: you can assign sense identifiers from ANY sense inventory to the contexts. They should not match certain gold standard inventory (we do not provide any test sense inventory). The contexts (sentences) which share the same meaning should have the same ``predict_sense_id``. The context with use different meanings of the target word, e.g. ``bank (area)`` vs ``bank (company)`` should have different sense identifiers. 
 
 In the end, you need to apply your models to the three mentioned above datasets and generate three ``test.csv`` files corresponding to your solutions of these datasets. You can use different models to solve different datasets.
 
@@ -50,7 +50,7 @@ Go to  [Codalab.org](https://competitions.codalab.org) and press "Sign Up". If y
 
 ### 4. Submit at CodaLab the three datasets
 
-For each of the three datasets, there exist a separate task on the CodaLab. Depending on the dataset you want to submit at the moment, you need to use the corresponding shared task: 
+For each of the three datasets, there exists a separate task on the CodaLab. Depending on the dataset you want to submit at the moment, you need to use the corresponding shared task: 
 
 - **[wiki-wiki dataset](https://competitions.codalab.org/competitions/17810)**  
 
@@ -63,7 +63,7 @@ Follow these steps to submit a model:
 
   1. Click the "Participate" link. 
   
-  2. If you are making the first submission regiser for the task by pressing the "Register" button.
+  2. If you are making the first submission register for the task by pressing the "Register" button.
   
   3. Click the "Submit / View Results" link. 
   
@@ -203,7 +203,7 @@ Your goal is to **design a system which takes as an input a pair of (word, conte
 Thus, the successful submissions will group all contexts referring to the same word sense (by assigning the same ```predict_sense_id```). To achieve this goal, you can you models which induce sense inventory from a large corpus of all words in the corpus, e.g. Adagram or try to cluster directly the contexts of one word, e.g. using the k-Means algorithm. Besides, you can use an existing sense inventory from a dictionary, e.g. RuWordNet, to build your modes (which again do not match exactly the gold dataset, but this is not a problem).  
 Below we provide more details on differences between two tracks.
 
-During the training phase of the shared task, you are supposed to develop your models, testing them on the available datasets. You will be supposed to apply the developed models on the test data, once they will be made available.
+During the training phase of the shared task, you are supposed to develop your models, testing them on the available datasets. You will be supposed to apply the developed models to the test data, once they will be made available.
 
 Knowledge-free and knowledge-rich tracks
 ----------------------------------------
