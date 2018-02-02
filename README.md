@@ -4,7 +4,7 @@ This repository contains instructions for participation in the [shared task on w
 
 # Making a submission (test dataset)
 
-Starting from the **15th of December** until the **1st of February** you can make a submission to the shared task. All submissions after the 1st of February will not be considered for the final ranking. The submissions are performed via the [CodaLab](https://competitions.codalab.org/) platform. To participate, follow the steps below.
+Starting from the **15th of December** until the **4th of February** you can make a submission to the shared task. All submissions after the 4th of February will not be considered for the final ranking. The submissions are performed via the [CodaLab](https://competitions.codalab.org/) platform. To participate, follow the steps below.
 
 ## Set by step instruction: how to submit
 
