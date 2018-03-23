@@ -58,7 +58,7 @@ def main():
                                                  ' datasets in the required format are available in the '
                                                  '"data" directory (train.csv). To run an already pre-filled '
                                                  'baseline system run '
-                                                 '"python eval.py data/wiki-wiki/train.baseline-adagram.csv"')
+                                                 '"python evaluate.py data/main/wiki-wiki/train.baseline-adagram.csv"')
 
     parser.add_argument('dataset', type=argparse.FileType('r'),
                                    help='Path to a CSV file with the dataset in the format '
